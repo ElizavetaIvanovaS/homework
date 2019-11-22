@@ -8,6 +8,26 @@ body {
   color: #333;
   background: #fff;
 }
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  background: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  transition: 0.2s;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea:focus {
+  box-shadow: inset 0 0 8px 1px rgba(68, 81, 98, 0.8);
+}
 ul {
   list-style: none;
   margin: 0;
@@ -151,12 +171,9 @@ p {
 }
 .scrinshots {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   /*max-width: 575px;
   max-height: 150px;*/
   width: 50%;
-  position: relative;
 }
 .scrinshots-image img {
   max-width: 200px;
@@ -168,17 +185,12 @@ p {
   text-align: left;
   color: #445161;
   font-weight: 400;
-  margin: 0 0 20px;
-}
-.scrinshots-image {
-  position: absolute;
-}
-.scrinshots-content {
 }
 
 .reviews-wrapper {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -20px;
 }
 .reviews-foto img {
   max-width: 75px;
@@ -187,18 +199,132 @@ p {
 .reviews {
   display: flex;
   width: 50%;
+  padding: 0 20px;
 }
 .reviews-content {
   background: #eaeaea;
   border-radius: 5px;
   margin-bottom: 25px;
+  padding: 15px;
+  position: relative;
+  margin-left: 30px;
 }
-.reviews-content p {
+.reviews-content:before {
+  content: "▶";
+  position: absolute;
+  top: 22px;
+  left: -22px;
+  transform: scaleY(1.9) rotateY(180deg) translateX(-7px);
+  /* transform: rotateX(8deg); */
+  font-size: 36px;
+  color: #eaeaea;
+}
+.reviews-content .italic {
   font-size: 14px;
   font-style: italic;
 }
 .regular {
+  font-size: 14px;
   font-weight: normal;
   color: #979797;
-  font-style: none;
+  margin: 0;
+}
+
+.box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.box-header {
+  font-size: 24px;
+  text-align: center;
+  padding: 5px 0;
+}
+.box-price {
+  background: #fff;
+  color: #495261;
+  font-size: 40px;
+  text-align: center;
+}
+.box-content-list {
+  font-size: 14px;
+  margin: 20px;
+}
+.box-button {
+  font-size: 18px;
+  text-align: center;
+  color: #495261;
+  background: #fff;
+  margin: 20px;
+  border-radius: 5px;
+}
+.box {
+  max-width: 300px;
+  background: #495261;
+  border: 1px solid #495261;
+  border-radius: 5px;
+  color: #fff;
+  flex-shrink: 1;
+}
+.section-blue [class^="title"] {
+  color: #fff;
+}
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+}
+.contact-form {
+  max-width: 500px;
+  flex-grow: 1;
+  margin-right: 45px;
+}
+.contact-form .form-field {
+  margin: 0 0 20px;
+}
+input,
+textarea {
+  background: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  height: 40px;
+  padding: 10px;
+}
+.contact-form textarea {
+  height: 170px;
+  resize: vertical;
+}
+.button {
+  background: #fff;
+  min-height: 40px;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 50px 8px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  width: auto;
+  color: #495261;
+  transition: 0.3s;
+}
+.button:hover {
+  background: #445161;
+  color: #fff;
+}
+.button-wrapper {
+  text-align: center;
+}
+.contact-list li img {
+  margin-right: 5px;
+  max-width: 26px;
+}
+.contact-list li a {
+  display: flex;
+  align-items: center;
+  margin: 0 0 18px;
+  line-height: 1;
 }
