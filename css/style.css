@@ -207,3 +207,41 @@ p {
   color: #979797;
   margin: 0;
 }
+
+.box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.box-header {
+  font-size: 24px;
+  text-align: center;
+  padding: 5px 0;
+}
+.box-price {
+  background: #fff;
+  color: #495261;
+  font-size: 40px;
+  text-align: center;
+}
+.box-content-list {
+  font-size: 14px;
+  margin: 20px;
+}
+.box-button {
+  font-size: 18px;
+  text-align: center;
+  color: #495261;
+  background: #fff;
+  margin: 20px;
+  border-radius: 5px;
+}
+.box {
+  max-width: 300px;
+  background: #495261;
+  border: 1px solid #495261;
+  border-radius: 5px;
+  color: #fff;
+  flex-shrink: 1;
+}
